@@ -1,6 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 import { MatTableDataSource } from '@angular/material/table';
+ 
+import { Router } from '@angular/router';
+import { JsonPipe } from '@angular/common';
+
+import { MatDialog } from '@angular/material/dialog';
+
+
+export interface PeriodicElement {
+  firstName: string;
+
+  lastName: string;
+
+  email: string;
+
+  phoneNumber: string;
+
+  address: string;
+
+  actions: string;
+
+  
+}
 
 @Component({
   selector: 'app-customer-management',
@@ -11,9 +33,9 @@ export class CustomerManagementComponent implements OnInit {
 
   customers!: any[];
   customer: any = {};
-  updatedCustomer: any = {}; // Define updatedCustomer property
+ updatedCustomer: any = {}; // Define updatedCustomer property
 
-  displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phoneNumber', 'address', 'actions'];
+   displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phoneNumber', 'address', 'actions'];
 
   constructor(private customerService: ApiserviceService) {}
   ngOnInit() {
@@ -61,6 +83,10 @@ export class CustomerManagementComponent implements OnInit {
     console.log(`View details for customer with ID: ${customer.id}`);
   }
 
+  customerApi: any = [];
+
+  coursebutton: boolean = true;
 
 
+  // ------------------------------------------------------
 }

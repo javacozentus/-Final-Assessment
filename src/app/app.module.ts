@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { NgClass, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -46,7 +47,7 @@ import { ReservationManagementComponent } from './reservation-management/reserva
     NgClass,
     NgFor,
     FormsModule,
-    
+    MatToolbarModule,
     MatFormFieldModule,
   
     MatSelectModule,

@@ -36,9 +36,12 @@ addCustomer(customer: any): Observable<any> {
   return this.http.post(`${this.url}/customers/add`, customer);
 }
 
-updateCustomer(id:any, updatedCustomer: any) {
-  return this.http.put(this.url+"/customers/"+id,updatedCustomer);
+updateCustomer(id: any, data: any) {
+  return this.http.put(this.url + "/customers/" + id, data);
 }
+
+
+
 
 
 deleteCustomer(customerId: number): Observable<any> {

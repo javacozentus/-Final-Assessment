@@ -1,8 +1,8 @@
 <form class="centered-form">
-    <h2>Customer Management</h2>
-    
-    <!-- Add new customer form -->
-    <form>
+  <h2>Customer Management</h2>
+
+  <!-- Add new customer form -->
+   <form>
       <mat-form-field>
         <mat-label>First Name</mat-label>
         <input matInput type="text" id="firstName" name="firstName" required>
@@ -32,9 +32,9 @@
     </form>
   
     <hr> 
-    <!-- Customer List -->
-     
-<table mat-table 
+  <!-- Customer List -->
+
+ <table mat-table 
     [dataSource]="customers" class="mat-elevation-z8">
       <ng-container matColumnDef="firstName">
         <th mat-header-cell *matHeaderCellDef> First Name </th>
